@@ -1,0 +1,30 @@
+# name the run (and thus files)
+
+runname: testrun1
+
+# Specify which rules to run (can be 'all' or select from ['umap_plot', 'crossgen_info', 'scib_metrics'])
+
+run_rules: all
+
+# For UMAPs
+
+model_input_npz: /mnt/projects/debruinz_project/carly_wolfe/cellcen_30k.npz
+model_input_pkl: /mnt/projects/debruinz_project/carly_wolfe/cellcen_30k.pkl
+
+# Only needed for metrics calculation
+
+model_input_h5ad: /mnt/projects/debruinz_project/carly_wolfe/cellcen_30k.h5ad
+
+# Only needed for crossgen umaps & statistics
+
+human_cis_npz: /mnt/projects/debruinz_project/summer_census_data/cross_gen_data/1e-7_KLw_bne_exp_dp/4599_human_cis_gen.npz
+human_cross_npz: /mnt/projects/debruinz_project/summer_census_data/cross_gen_data/1e-7_KLw_bne_exp_dp/4599_human_cross_gen.npz
+mouse_cis_npz: /mnt/projects/debruinz_project/summer_census_data/cross_gen_data/1e-7_KLw_bne_exp_dp/4599_mouse_cis_gen.npz
+mouse_cross_npz: /mnt/projects/debruinz_project/summer_census_data/cross_gen_data/1e-7_KLw_bne_exp_dp/4599_mouse_cross_gen.npz
+
+
+
+
+
+
+# expand("{sample}.{param}.output.pdf", sample=config["samples"], param=config["yourparam"])
