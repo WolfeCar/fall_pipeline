@@ -15,11 +15,10 @@ module load miniforge3/24.3.0-0
 conda env list
 
 source activate /mnt/home/wolfeca/.conda/envs/scib-pipeline-R4.0  
-# source activate /mnt/home/wolfeca/.conda/envs/snakie
 # conda env list
 module load miniforge3/24.3.0-0
 
-snakemake  --configfile configs/first.yaml --cores 'all'
+snakemake  --configfile configs/config.yaml --cores 'all'
 
 conda activate base
 conda deactivate
